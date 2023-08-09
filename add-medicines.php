@@ -20,13 +20,39 @@
        $quantity = $_POST['quantity'];
        $cost = $_POST['cost'];
        $price = $_POST['price'];
+       $d=date("d/m/y");
 
        $x=$sheets * $quantity;
-       $y=$cost/$x;          
-    
-       $sqlquery = "INSERT INTO `medicines` VALUES ('$medicine', '$category', '$supplier','$y','$doctor', '$price','$x')";
-       $res = mysqli_query($con,$sqlquery);
+       $y=$cost/$x;    
+       
+       
 
+
+
+
+       $query = "SELECT mname,sname,doctor FROM medicines WHERE mname = '$medicine' and sname = '$supplier' and doctor = '$doctor'";
+       $result = mysqli_query($con,$query);
+       if ($result)
+       {
+         if (mysqli_num_rows($result) > 0) 
+         {
+            $sqlquery = "UPDATE `medicines` SET `quantity_present`= `quantity_present` + " . (int)$x . " WHERE mname = '$medicine' and sname = '$supplier' and doctor = '$doctor'";
+            $res = mysqli_query($con,$sqlquery);
+        }
+        else 
+        {
+            $sqlquery = "INSERT INTO `medicines` VALUES ('$medicine', '$category', '$supplier','$y','$doctor', '$price','$x')";
+            $res = mysqli_query($con,$sqlquery);
+        }
+      } 
+
+
+       //$sqlquery = "INSERT INTO `medicines` VALUES ('$medicine', '$category', '$supplier','$y','$doctor', '$price','$x')";
+       //$res = mysqli_query($con,$sqlquery);
+
+
+       $sqlquery99 = "INSERT INTO `purchase` VALUES ('$medicine', '$category', '$supplier','$d','$doctor', '$x','$cost')";
+       $res99 = mysqli_query($con,$sqlquery99);
 
        header("Location: add-medicines.php");
        exit();
@@ -93,7 +119,7 @@ include "recept-sidebar.php";
 </div>
 </div>
 
-<div class="col-12 col-sm-4">
+<!--<div class="col-12 col-sm-4">
 <div class="form-group local-forms">
 <label>category <span class="login-danger">*</span></label>
 <select class="form-control select">
@@ -101,6 +127,19 @@ include "recept-sidebar.php";
 <option>Tablet</option>
 <option>Ointment</option>
 <option>Syrup</option>
+</select>
+</div>
+</div>  -->
+
+
+
+<div class="col-12 col-sm-4">
+<div class="form-group local-forms">
+<label>Category <span class="login-danger">*</span></label>
+<select name="category" value="" class="form-control select">
+<option>Select Category</option>
+<option>Tablet</option>
+<option>Ointment</option>
 </select>
 </div>
 </div>
