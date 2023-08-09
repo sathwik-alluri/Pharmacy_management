@@ -178,10 +178,10 @@
 <li class="submenu">
 <a href="#"><i class="fas fa-graduation-cap"></i> <span> Invoices</span> <span class="menu-arrow"></span></a>
 <ul>
-<li><a href="recept-add-in-pat.php">Manage invoices</a></li>
-<li><a href="recept-in-pat-list.php">to be removed</a></li>
+<li><a href="manage-invoices.php">Manage invoices</a></li>
+<!-- <li><a href="recept-in-pat-list.php">to be removed</a></li>  -->
 <!--  <li><a href="add-student.php">Student Add</a></li> -->
-<li><a href="recept-in-pat-edit-list.php">to be removed</a></li> 
+<!-- <li><a href="recept-in-pat-edit-list.php">to be removed</a></li>   -->
 </ul>
 </li>
 <li class="submenu">
