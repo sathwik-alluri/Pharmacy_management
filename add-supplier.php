@@ -18,7 +18,17 @@
        $lic_num = $_POST['licnum'];
        $place = $_POST['place'];
     
-       $sqlquery = "INSERT INTO `supplier` VALUES ('$sname', '$phone', '$lic_num','$place')";
+       //$sqlquery = "INSERT INTO `supplier` VALUES ('$sname', '$phone', '$lic_num','$place')";
+
+       $sqlquery =   "INSERT INTO supplier (sname, phone,licence_number,place)
+       SELECT '$sname','$phone','$lic_num','$place'
+       WHERE NOT EXISTS (
+       SELECT 1
+       FROM supplier
+           WHERE sname = '$sname' AND phone = '$phone' AND licence_number = '$lic_num' AND place = '$place'
+       LIMIT 1
+       ) ";
+
        $res = mysqli_query($con,$sqlquery);
 
 
