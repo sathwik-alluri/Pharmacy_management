@@ -103,7 +103,7 @@
 <p class="noti-time"><span class="notification-time">12 mins ago</span></p>
 </div>
 </div>
-</a>
+</a> 
 </li>
 </ul>
 </div>
@@ -197,8 +197,8 @@
 <a href="#"><i class="fas fa-building"></i> <span> Purchases</span> <span class="menu-arrow"></span></a>
 <ul>
 <li><a href="add-supplier.php">Add supplier</a></li>
-<li><a href="add-department.php">Add Purchase</a></li>
-<li><a href="edit-department.php">Manage Purchase</a></li> 
+<!-- <li><a href="add-department.php">Add Purchase</a></li>   -->
+<li><a href="manage-purchases.php">Manage Purchase</a></li> 
 </ul>
 </li>
 <!-- <li class="submenu">
