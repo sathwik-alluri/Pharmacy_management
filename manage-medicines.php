@@ -2,6 +2,8 @@
 
 $con = mysqli_connect("localhost","root","", "pharmacy");
 
+session_start();
+
 ?>
 
 
@@ -89,6 +91,9 @@ include "recept-sidebar.php";
 <th>Cost Per Unit</th>
 <th>Selling Price per Unit
 </th>
+<!-- <th>
+    Edit Selling Price
+</th>  -->
 <!-- <th class="text-end">Add</th>  -->
 </tr>
 
@@ -129,8 +134,16 @@ include "recept-sidebar.php";
                                         <td>
                                         <?php echo $row['price']; ?>
                                         </td>
+                                        <!-- <td>
+                                           <!--<button type="button" class="btn btn-rounded btn-info">Edit</button> -->
+                                           <!-- <div class="actions">
+                                            <a  href="edit-sellingprice.php" class="btn btn-sm bg-danger-light"  onclick="window.location.href='edit-sellingprice.php?name=<?php echo $row['mname'] ?>&doctor=<?php  echo $row['doctor'] ?>" >
+                                                <i class="feather-edit"></i>
+                                            </a>
+                                           </div>
+                                        </td> -->
                     </tr>
-
+                    
                     <?php
 
             }
