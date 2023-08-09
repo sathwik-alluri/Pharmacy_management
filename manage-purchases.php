@@ -77,7 +77,7 @@ include "recept-sidebar.php";
 <div class="page-header">
 <div class="row align-items-center">
 <div class="col">
-<h3 class="page-title">Manage Medicines</h3>
+<h3 class="page-title">Manage Purchases</h3>
 </div>
 </div>
 </div>
