@@ -38,22 +38,29 @@ include "recept-sidebar.php";
 
 <div class="student-group-form">
 <div class="row">
+    <!--
 <div class="col-lg-3 col-md-6">
 <div class="form-group">
 <input type="text" class="form-control" placeholder="Search by Invoice ID ...">
 </div>
-</div>
+</div>   -->
 <div class="col-lg-3 col-md-6">
 <div class="form-group">
 <input type="text" class="form-control" placeholder="Search by Doctor ...">
 </div>
 </div>
-<!--
+
 <div class="col-lg-3 col-md-6">
 <div class="form-group">
-<input type="text" class="form-control" placeholder="Search by Category ...">
+<input type="text" class="form-control" placeholder="Search by Customer ...">
 </div>
-</div>  -->
+</div> 
+
+<div class="col-lg-3 col-md-6">
+<div class="form-group">
+<input type="text" class="form-control" placeholder="Search by Date ...">
+</div>
+</div> 
 
 <div class="col-lg-2">
 <div class="search-student-btn">
