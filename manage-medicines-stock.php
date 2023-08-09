@@ -138,8 +138,13 @@ SNo
                                         <td>
                                         <?php echo $row['quantity_present']; ?></small>
                                         </td>
-                                        <td class="text-end">
-                                            <button type="button" class="btn btn-rounded btn-info">Edit</button>
+                                        <td>
+                                           <!--<button type="button" class="btn btn-rounded btn-info">Edit</button> -->
+                                            <div class="actions">
+                                            <a href="medicines-stock-edit.php" class="btn btn-sm bg-danger-light">
+                                                <i class="feather-edit"></i>
+                                            </a>
+                                           </div>
                                         </td>
                                            </tr>
                        <?php
@@ -189,8 +194,13 @@ SNo
                                                      <td>
                                                      <?php echo $row['quantity_present']; ?></small>
                                                      </td>
-                                                     <td class="text-end">
-                                                         <button type="button" class="btn btn-rounded btn-info">Edit</button>
+                                                     <td>
+                                                          <!--  <button type="button" class="btn btn-rounded btn-info">Edit</button>   -->
+                                                          <div class="actions">
+                                            <a href="medicines-stock-edit.php" class="btn btn-sm bg-danger-light">
+                                                <i class="feather-edit"></i>
+                                            </a>
+                                           </div>
                                                      </td>
                                                         </tr>
                                     <?php
@@ -240,8 +250,12 @@ SNo
                                         <td>
                                         <?php echo $row['quantity_present']; ?></small>
                                         </td>
-                                        <td class="text-end">
-                                            <button type="button" class="btn btn-rounded btn-info">Edit</button>
+                                        <td>
+                                        <div class="actions">
+                                            <a href="medicines-stock-edit.php" class="btn btn-sm bg-danger-light">
+                                                <i class="feather-edit"></i>
+                                            </a>
+                                           </div>
                                         </td>
                     </tr>
                              
